@@ -6,3 +6,10 @@ export function selectBook(book) {
         payload: book
     };
 }
+
+export function searchBook(term) {
+    return {
+        type: actionTypes.SEARCH_BOOK,
+        payload: term
+    };
+}
