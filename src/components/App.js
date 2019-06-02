@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import BookList from './BookList';
+import BookDetails from './BookDetails';
 
 class App extends Component {
     state = {
@@ -23,6 +24,7 @@ class App extends Component {
             <div>
                 <input value={this.state.term} onChange={this.onInputChange} />
                 <BookList />
+                <BookDetails />
             </div>
         );
     }

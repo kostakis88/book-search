@@ -6,7 +6,7 @@ class BookList extends Component {
     renderList() {
         return this.props.books.map((book) => {
             return (
-                <li key={book.title}>
+                <li key={book.title} onClick={() => this.props.selectBook(book)}>
                     {book.title}
                 </li>
             );
@@ -24,10 +24,10 @@ class BookList extends Component {
     }
 }
 
-function MapStateToProps(state) {
+function mapStateToProps(state) {
     return {
         books: state.books
     };
 }
 
-export default connect(MapStateToProps, actions)(BookList);
+export default connect(mapStateToProps, actions)(BookList);
